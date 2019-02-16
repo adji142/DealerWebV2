@@ -8,11 +8,11 @@
 
 	$query = "SELECT * FROM users WHERE username = '$username'";
 	$hasil = mysqli_query($koneksi,$query) or die("Error");
-	$data  = mysqli_fetch_array($hasil);
+	$data_fetch  = mysqli_fetch_array($hasil);
 
-	if ($data['username'] && $pass ==$data['password']){
-		$_SESSION['username'] = $data['username'];
-		$_SESSION['userid'] = $data['id'];
+	if ($data_fetch['username'] && $pass ==$data_fetch['password']){
+		$_SESSION['username'] = $data_fetch['username'];
+		$_SESSION['userid'] = $data_fetch['id'];
 		// header("location:../home-admin.php");
 		$data['success'] = true;
 	}

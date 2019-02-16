@@ -92,6 +92,8 @@ include 'parts/footer.php';
         					text: 'Data Berhasil di simpan',
         					type: 'success',
         					confirmButtonText: 'Cool'
+        				}).then(function() {
+        					document.location='vendorview.php';
         				});
         			}
         			else{

@@ -21,6 +21,9 @@
 <script src="asset/js/bootstrap.js"></script>
 <script src="asset/js/signin.js"></script>
 <script src="asset/js/sweetalert2.min.js"></script>
+<!-- datatable -->
+<script src="asset/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="asset/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <script language="javascript" type="text/javascript" src="asset/js/full-calendar/fullcalendar.min.js"></script>
  
 <script src="asset/js/base.js"></script> 

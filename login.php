@@ -16,7 +16,7 @@
     
 <link href="asset/css/style.css" rel="stylesheet" type="text/css">
 <link href="asset/css/pages/signin.css" rel="stylesheet" type="text/css">
-
+<link rel="stylesheet" href="asset/css/sweetalert2.min.css">
 </head>
 
 <body>
@@ -93,7 +93,7 @@
 <script src="asset/js/bootstrap.js"></script>
 
 <script src="asset/js/signin.js"></script>
-
+<script src="asset/js/sweetalert2.min.js"></script>
 </body>
 
 </html>
@@ -124,6 +124,7 @@
         				document.location='index.php';
         			}
         			else{
+
         				if(response.message == 'E500-03'){
 	        				Swal.fire({
 	        					title: 'Error !',

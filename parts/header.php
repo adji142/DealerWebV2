@@ -26,6 +26,11 @@ $userid = $_SESSION['userid'];
 <!-- <link href="asset/css/pages/dashboard.css" rel="stylesheet"> -->
 <link href="asset/css/pages/signin.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="asset/css/sweetalert2.min.css">
+<!-- datatable -->
+
+<link rel="stylesheet" href="asset/datatables.net-bs/css/dataTables.bootstrap.min.css">
+
+
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

@@ -100,13 +100,9 @@ include 'parts/footer.php';
         					text: 'Data Berhasil di simpan',
         					type: 'success',
         					confirmButtonText: 'Cool'
+        				}).then(function() {
+        					document.location='userview.php';
         				});
-        				$('#btn_submit').text('Save');
-        				$('#btn_submit').attr('disabled',false);
-        				// $('#username').text('');
-        				// $('#nama').text('');
-        				// $('#password').text('');
-        				$('#edit-profile').trigger("reset");
         				
         			}
         			else{
