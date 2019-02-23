@@ -11,7 +11,7 @@
  Target Server Version : 100136
  File Encoding         : 65001
 
- Date: 16/02/2019 17:23:29
+ Date: 23/02/2019 09:19:31
 */
 
 SET NAMES utf8mb4;
@@ -35,8 +35,15 @@ CREATE TABLE `mastercustomer`  (
   `nokk` varchar(25) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
+  `nama` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of mastercustomer
+-- ----------------------------
+INSERT INTO `mastercustomer` VALUES (1, '12345678', 'JL. PADALARANG DS. PASIR HALANG KP. CIKARANG MULYA RT 3 RW 5', '57135', 'Surakarta - Kota', '2019-02-20', '123456', NULL, NULL, NULL, '', 'admin', '2019-02-22 00:00:00.000000', 'Prasetyo Aji Wibowo 1 ');
+INSERT INTO `mastercustomer` VALUES (3, '67871923879', 'sementara', '123123', 'Surakarta - Kota', '2019-02-23', '081', NULL, NULL, NULL, '', 'admin', '2019-02-23 00:00:00.000000', 'Temporary');
 
 -- ----------------------------
 -- Table structure for pembelian
@@ -51,7 +58,13 @@ CREATE TABLE `pembelian`  (
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of pembelian
+-- ----------------------------
+INSERT INTO `pembelian` VALUES (1, 'NT001', '2019-02-20', '2019-02-20', 1, 'admin', '2019-02-20 00:00:00.000000');
+INSERT INTO `pembelian` VALUES (2, 'NT001', '2019-02-22', '2019-02-22', 1, 'admin', '2019-02-22 00:00:00.000000');
 
 -- ----------------------------
 -- Table structure for pembeliandetail
@@ -66,7 +79,16 @@ CREATE TABLE `pembeliandetail`  (
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of pembeliandetail
+-- ----------------------------
+INSERT INTO `pembeliandetail` VALUES (1, 1, 1, 2, 123123.00, 'admin', '2019-02-20 00:00:00.000000');
+INSERT INTO `pembeliandetail` VALUES (3, 2, 1, 2, 124124.00, 'admin', '2019-02-22 00:00:00.000000');
+INSERT INTO `pembeliandetail` VALUES (4, 2, 1, 2, 124124.00, 'admin', '2019-02-22 00:00:00.000000');
+INSERT INTO `pembeliandetail` VALUES (5, 2, 1, 2, 124124.00, 'admin', '2019-02-22 00:00:00.000000');
+INSERT INTO `pembeliandetail` VALUES (6, 2, 1, 2, 124124.00, 'admin', '2019-02-22 00:00:00.000000');
 
 -- ----------------------------
 -- Table structure for penjualan
@@ -82,8 +104,15 @@ CREATE TABLE `penjualan`  (
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
   `tgljatuhtempo` date NULL DEFAULT NULL,
+  `jenistrx` varchar(2) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of penjualan
+-- ----------------------------
+INSERT INTO `penjualan` VALUES (12, 1, 'NT0001', '2019-02-23 00:00:00.000000', 'JL. PADALARANG DS. PASIR HALANG KP. CIKARANG MULYA RT 3 RW 5', 0, 'admin', '2019-02-23 00:00:00.000000', '2019-02-23', 'T');
+INSERT INTO `penjualan` VALUES (13, 3, 'NT00013', '2019-02-23 00:00:00.000000', 'sementara', 36, 'admin', '2019-02-23 00:00:00.000000', '2022-02-23', 'K');
 
 -- ----------------------------
 -- Table structure for penjualandetail
@@ -98,7 +127,13 @@ CREATE TABLE `penjualandetail`  (
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of penjualandetail
+-- ----------------------------
+INSERT INTO `penjualandetail` VALUES (8, 12, 1, 1, 15000000.00, 'admin', '2019-02-23 00:00:00.000000');
+INSERT INTO `penjualandetail` VALUES (9, 13, 1, 1, 15000000.00, 'admin', '2019-02-23 00:00:00.000000');
 
 -- ----------------------------
 -- Table structure for permission
@@ -115,14 +150,16 @@ CREATE TABLE `permission`  (
 -- ----------------------------
 -- Records of permission
 -- ----------------------------
-INSERT INTO `permission` VALUES (1, 'Nota Pembelian', '#', 'icon-pencil');
-INSERT INTO `permission` VALUES (2, 'Nota Penjualan', '#', 'icon-shopping-cart');
+INSERT INTO `permission` VALUES (0, 'Master Customer', '#', 'icon-comment');
+INSERT INTO `permission` VALUES (1, 'Nota Pembelian', 'pbview.php', 'icon-pencil');
+INSERT INTO `permission` VALUES (2, 'Nota Penjualan', 'pjview.php', 'icon-shopping-cart');
 INSERT INTO `permission` VALUES (3, 'Angsuran', '#', 'icon-money');
-INSERT INTO `permission` VALUES (4, 'Master Stock', 'mstrstock.php', 'icon-plus-sign');
-INSERT INTO `permission` VALUES (5, 'Master Vendor', 'mstrvendor.php', 'icon-flag');
-INSERT INTO `permission` VALUES (6, 'User', 'registernewuser.php', 'icon-user-md');
+INSERT INTO `permission` VALUES (4, 'Master Stock', 'stockview.php', 'icon-plus-sign');
+INSERT INTO `permission` VALUES (5, 'Master Vendor', 'vendorview.php', 'icon-flag');
+INSERT INTO `permission` VALUES (6, 'User', 'userview.php', 'icon-user-md');
 INSERT INTO `permission` VALUES (7, 'Laporan Penjualan', '#', 'icon-bar-chart');
 INSERT INTO `permission` VALUES (8, 'Laporan Angsuran', '#', 'icon-credit-card');
+INSERT INTO `permission` VALUES (9, 'Master Customer', 'custview.php', 'icon-comment');
 
 -- ----------------------------
 -- Table structure for permissionrole
@@ -151,33 +188,49 @@ INSERT INTO `permissionrole` VALUES (3, 4);
 INSERT INTO `permissionrole` VALUES (3, 5);
 INSERT INTO `permissionrole` VALUES (4, 2);
 INSERT INTO `permissionrole` VALUES (4, 7);
+INSERT INTO `permissionrole` VALUES (1, 9);
+INSERT INTO `permissionrole` VALUES (4, 9);
 
 -- ----------------------------
 -- Table structure for piutang
 -- ----------------------------
 DROP TABLE IF EXISTS `piutang`;
 CREATE TABLE `piutang`  (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `customerid` int(11) NULL DEFAULT NULL,
   `debet` decimal(19, 2) NULL DEFAULT NULL,
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
+  `penjualanid` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of piutang
+-- ----------------------------
+INSERT INTO `piutang` VALUES (16, 1, 15000000.00, 'admin', '2019-02-23 00:00:00.000000', 12);
+INSERT INTO `piutang` VALUES (17, 3, 11000000.00, 'admin', '2019-02-23 00:00:00.000000', 13);
 
 -- ----------------------------
 -- Table structure for piutangdetail
 -- ----------------------------
 DROP TABLE IF EXISTS `piutangdetail`;
 CREATE TABLE `piutangdetail`  (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `piutangid` int(11) NULL DEFAULT NULL,
   `kredit` decimal(19, 2) NULL DEFAULT NULL,
   `tgljatuhtempo` date NULL DEFAULT NULL,
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
+  `src` varchar(5) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of piutangdetail
+-- ----------------------------
+INSERT INTO `piutangdetail` VALUES (16, 16, 15000000.00, '2019-02-23', 'admin', '2019-02-23 00:00:00.000000', 'KAS');
+INSERT INTO `piutangdetail` VALUES (17, 17, 4000000.00, '2019-02-23', 'admin', '2019-02-23 00:00:00.000000', 'DP');
 
 -- ----------------------------
 -- Table structure for roles
@@ -236,6 +289,9 @@ INSERT INTO `userrole` VALUES (5, 1);
 INSERT INTO `userrole` VALUES (7, 4);
 INSERT INTO `userrole` VALUES (9, 4);
 INSERT INTO `userrole` VALUES (10, 1);
+INSERT INTO `userrole` VALUES (11, 1);
+INSERT INTO `userrole` VALUES (12, 1);
+INSERT INTO `userrole` VALUES (13, 1);
 
 -- ----------------------------
 -- Table structure for users
@@ -249,7 +305,7 @@ CREATE TABLE `users`  (
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of users
@@ -260,6 +316,9 @@ INSERT INTO `users` VALUES (7, 'PJL01', 'penjualan', '0192023a7bbd73250516f069df
 INSERT INTO `users` VALUES (8, 'PJL01', 'Penjualan', '0192023a7bbd73250516f069df18b500', 'System', '2019-02-15 00:00:00.000000');
 INSERT INTO `users` VALUES (9, 'PJL02', 'Penjualan 2', '0192023a7bbd73250516f069df18b500', 'System', '2019-02-16 00:00:00.000000');
 INSERT INTO `users` VALUES (10, 'admin2', 'admin2', '0192023a7bbd73250516f069df18b500', 'System', '2019-02-16 00:00:00.000000');
+INSERT INTO `users` VALUES (11, 'admin3', 'asd', '21232f297a57a5a743894a0e4a801fc3', 'System', '2019-02-16 00:00:00.000000');
+INSERT INTO `users` VALUES (12, 'admin5', 'asd', '21232f297a57a5a743894a0e4a801fc3', 'System', '2019-02-16 00:00:00.000000');
+INSERT INTO `users` VALUES (13, 'adming', 'sadasd', '21232f297a57a5a743894a0e4a801fc3', 'System', '2019-02-16 00:00:00.000000');
 
 -- ----------------------------
 -- Table structure for vendor
@@ -274,11 +333,12 @@ CREATE TABLE `vendor`  (
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of vendor
 -- ----------------------------
 INSERT INTO `vendor` VALUES (1, 'VD-001', 'YAMAHA', 'JL. RAYA CILEBUT, BOJONG GEDE NO. 03', '021', 'admin', '2019-02-16 00:00:00.000000');
+INSERT INTO `vendor` VALUES (2, 'VD-002', 'ASM', 'solo', '123', 'admin', '2019-02-21 00:00:00.000000');
 
 SET FOREIGN_KEY_CHECKS = 1;

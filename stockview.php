@@ -17,7 +17,7 @@ include 'parts/header.php';
 			            		<div class="span11">
 			            		<table id="example1" class="table table-bordered table-hover">
 			            			<thead>
-			            				<th>#</th>
+			            				<!-- <th>#</th> -->
 								        <th>Nama Stock</th>
 								        <th>Warna</th>
 								        <th>Nomer Mesin</th>
@@ -39,7 +39,7 @@ include 'parts/header.php';
 										            $qtystok   = stripslashes ($rsx['qtystok']);
 										            echo "
 										            <tr>
-										              <td>button</td>
+										              
 										              <td>".$namabarang."</td>
 										              <td>".$warna."</td>
 										              <td>".$nomesin."</td>

@@ -17,7 +17,7 @@ include 'parts/header.php';
 			            		<div class="span11">
 			            		<table id="example1" class="table table-bordered table-hover">
 			            			<thead>
-			            				<th>#</th>
+			            				<!-- <th>#</th> -->
 								        <th>Nama Vendor</th>
 								        <th>Alamat</th>
 								        <th>No telepon</th>
@@ -35,7 +35,7 @@ include 'parts/header.php';
 										            $notlp   = stripslashes ($rsx['notlp']);
 										            echo "
 										            <tr>
-										              <td>button</td>
+										              
 										              <td>".$namavendor."</td>
 										              <td>".$alamatvendor."</td>
 										              <td>".$notlp."</td>

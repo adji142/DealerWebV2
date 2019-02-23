@@ -17,7 +17,7 @@ include 'parts/header.php';
 			            		<div class="span11">
 			            		<table id="example1" class="table table-bordered table-hover">
 			            			<thead>
-			            				<th>#</th>
+			            				<!-- <th>#</th> -->
 								        <th>Username</th>
 								        <th>Nama</th>
 								        <th>Role</th>
@@ -37,7 +37,7 @@ include 'parts/header.php';
 										            $rolename   = stripslashes ($rsx['rolename']);
 										            echo "
 										            <tr>
-										              <td>button</td>
+										              
 										              <td>".$username."</td>
 										              <td>".$nama."</td>
 										              <td>".$rolename."</td>

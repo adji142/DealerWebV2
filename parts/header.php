@@ -27,7 +27,7 @@ $userid = $_SESSION['userid'];
 <link href="asset/css/pages/signin.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="asset/css/sweetalert2.min.css">
 <!-- datatable -->
-
+<link rel="stylesheet" href="asset/select2/dist/css/select2.min.css">
 <link rel="stylesheet" href="asset/datatables.net-bs/css/dataTables.bootstrap.min.css">
 
 

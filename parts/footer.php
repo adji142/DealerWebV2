@@ -25,8 +25,21 @@
 <script src="asset/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="asset/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <script language="javascript" type="text/javascript" src="asset/js/full-calendar/fullcalendar.min.js"></script>
- 
+<script src="asset/select2/dist/js/select2.full.min.js"></script>
 <script src="asset/js/base.js"></script> 
+
+<!-- <script type="text/javascript">
+  $(function () {
+    $('.select2').select2()
+
+    //Datemask dd/mm/yyyy
+    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+    //Datemask2 mm/dd/yyyy
+    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    //Money Euro
+    $('[data-mask]').inputmask()
+  })
+</script> -->
 <script>     
 
         var lineChartData = {
