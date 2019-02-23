@@ -23,6 +23,11 @@
 <script src="asset/js/sweetalert2.min.js"></script>
 <!-- datatable -->
 <script src="asset/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="asset/datatables.net/js/dataTables.buttons.min.js"></script>
+<script src="asset/datatables.net/js/buttons.flash.min.js"></script>
+<script src="asset/datatables.net/js/buttons.html5.min.js"></script>
+<script src="asset/datatables.net/js/buttons.print.min.js"></script>
+
 <script src="asset/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <script language="javascript" type="text/javascript" src="asset/js/full-calendar/fullcalendar.min.js"></script>
 <script src="asset/select2/dist/js/select2.full.min.js"></script>

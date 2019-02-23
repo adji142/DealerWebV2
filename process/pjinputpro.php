@@ -124,7 +124,7 @@
 			$data['message'] = 'E500-03-PJH'; // gagal input Header
 		}
 		// Insert ke piutang
-		$debet = intval($hrg) - intval($dp) ;
+		$debet = intval($hrg);
 		$insertPiut = "INSERT INTO piutang(customerid,debet,createdby,createdon,penjualanid) VALUES
 						($cust,$debet,'$user','$now',$idpenjualan)";
 		$inputPiut = mysqli_query($Open,$insertPiut);

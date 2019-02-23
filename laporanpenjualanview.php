@@ -8,7 +8,7 @@ include 'parts/header.php';
 				<div class="span12">
 					<div class="widget widget-nopad">
 						<div class="widget-header"> <i class="icon-list-alt"></i>
-			            	<h3>Tambah Master Stock Baru <a href="mstrstock.php" class="btn btn-general" id="btn_submit">Tambah</a></h3>
+			            	<h3>Laporan Penjualan</h3>
 			            </div>
 			            <br>
 			            <!-- <div class="tab-content"> -->
@@ -17,38 +17,49 @@ include 'parts/header.php';
 			            		<div class="span11">
 			            		<table id="example1" class="table table-bordered table-hover">
 			            			<thead>
-			            				<!-- <th>#</th> -->
-								        <th>Nama Stock</th>
+								        <th>No Nota</th>
+								        <th>Tgl Nota</th>
+								        <th>Tempo (Bulan)</th>
+								        <th>Jenis Transaksi</th>
+								        <th>Nama Unit</th>
 								        <th>Warna</th>
 								        <th>Nomer Mesin</th>
 								        <th>Nomer Rangka</th>
-								        <th>Stock Gudang</th>
+								        <th>Qty</th>
+								        <th>Harga</th>
 			            			</thead>
 			            			<tbody>
 			            				
 			            					<?php
 			            						$rs = mysqli_query($Open,"
-									            select *, (select sum(pb.qtybeli) from pembeliandetail pb where pb.stockid = s.id )Pembelian ,
-												(select sum(pb.qty) from penjualandetail pb where pb.stockid = s.id ) penjualan,
-												(select sum(pb.qtybeli) from pembeliandetail pb where pb.stockid = s.id ) - 
-												(select sum(pb.qty) from penjualandetail pb where pb.stockid = s.id ) qtyakhir
-												from stok s
+									            select a.nonota,convert(a.tglnota,date)tglnota,a.tempo,a.jenistrx,s.namabarang,s.warna,s.nomesin,s.norangka,sum(b.qty) qty,sum(b.hrgotr) hrg from penjualan a
+												inner join penjualandetail b on a.id = b.penjualanid
+												left join stok s on s.id = b.stockid
+												group by a.nonota,a.tglnota,a.tempo,a.jenistrx,s.namabarang,s.warna,s.nomesin,s.norangka
 									            ");
 									            while ($rsx = mysqli_fetch_array($rs)) {
-										            $id = stripslashes ($rsx['id']);
-										            $namabarang= stripslashes ($rsx['namabarang']);
-										            $warna   = stripslashes ($rsx['warna']);
-										            $nomesin   = stripslashes ($rsx['nomesin']);
-										            $norangka   = stripslashes ($rsx['norangka']);
-										            $qtystok   = stripslashes ($rsx['qtyakhir']);
+										            $nonota = stripslashes ($rsx['nonota']);
+										            $tglnota = stripslashes ($rsx['tglnota']);
+										            $tempo = stripslashes ($rsx['tempo']);
+										            $jenistrx = stripslashes ($rsx['jenistrx']);
+										            $namabarang = stripslashes ($rsx['namabarang']);
+										            $warna = stripslashes ($rsx['warna']);
+										            $hrgotr = stripslashes ($rsx['hrg']);
+										            $nomesin = stripslashes ($rsx['nomesin']);
+										            $norangka = stripslashes ($rsx['norangka']);
+										            $qty = stripslashes ($rsx['qty']);
 										            echo "
 										            <tr>
-										              
+										              <td>".$nonota."</td>
+										              <td>".$tglnota."</td>
+										              <td>".$tempo."</td>
+										              <td>".$jenistrx."</td>
 										              <td>".$namabarang."</td>
 										              <td>".$warna."</td>
 										              <td>".$nomesin."</td>
 										              <td>".$norangka."</td>
-										              <td>".$qtystok."</td>
+										              <td>".$qty."</td>
+										              <td>".$hrgotr."</td>
 										            </tr>
 										            ";
 										          }

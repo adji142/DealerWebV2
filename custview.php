@@ -69,14 +69,12 @@ include 'parts/footer.php';
 ?>
 <script>
   $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : true
-    })
+    $('#example1').DataTable({
+    	dom: 'Bfrtip',
+    	buttons: [
+            'copy', 'excel', 'pdf', 'print'
+        ],
+        'ordering'    : false,
+    });
   })
 </script>
