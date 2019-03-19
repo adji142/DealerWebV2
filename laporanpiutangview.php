@@ -8,7 +8,7 @@ include 'parts/header.php';
 				<div class="span12">
 					<div class="widget widget-nopad">
 						<div class="widget-header"> <i class="icon-list-alt"></i>
-			            	<h3>Laporan Penjualan</h3>
+			            	<h3>Laporan Piutang angsuran</h3>
 			            </div>
 			            <br>
 			            <!-- <div class="tab-content"> -->

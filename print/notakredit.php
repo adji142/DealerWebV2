@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>NAMA DEALER | Invoice</title>
+  <title>Dealer Putra Utama Motor | Invoice</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -62,7 +62,7 @@
     <div class="row">
       <div class="col-xs-12">
         <h2 class="page-header">
-          <i class="fa fa-globe"></i> KWITANSI TANDA TERIMA NOTA KREDIT - NAMA DEALER.
+          <i class="fa fa-globe"></i> KWITANSI TANDA TERIMA NOTA KREDIT - Dealer Putra Utama Motor.
           <small class="pull-right"><?php echo $now; ?></small>
         </h2>
       </div>
@@ -73,11 +73,10 @@
       <div class="col-sm-4 invoice-col">
         From
         <address>
-          <strong>Nama Dealer</strong><br>
-          ALamat Line 1<br>
-          Alamat Line 2<br>
-          Phone: --<br>
-          Email: --
+          <strong>Dealer Putra Utama Motor</strong><br>
+          Jalan Slamet Riyadi Gayam, Johosari, Joho, <br>
+          Kec. Sukoharjo, Kabupaten Sukoharjo, Jawa Tengah 57513<br>
+          Phone: 0822-6420-3544<br>
         </address>
       </div>
       <!-- /.col -->
@@ -228,7 +227,7 @@
     <div class="row">
       <div class="col-xs-12">
         <h2 class="page-header">
-          <i class="fa fa-globe"></i> KWITANSI TANDA TERIMA NOTA KREDIT - NAMA DEALER.
+          <i class="fa fa-globe"></i> KWITANSI TANDA TERIMA NOTA KREDIT - Dealer Putra Utama Motor.
           <small class="pull-right"><?php echo $now; ?></small>
         </h2>
       </div>
@@ -239,11 +238,10 @@
       <div class="col-sm-4 invoice-col">
         From
         <address>
-          <strong>Nama Dealer</strong><br>
-          ALamat Line 1<br>
-          Alamat Line 2<br>
-          Phone: --<br>
-          Email: --
+          <strong>Dealer Putra Utama Motor</strong><br>
+          Jalan Slamet Riyadi Gayam, Johosari, Joho, <br>
+          Kec. Sukoharjo, Kabupaten Sukoharjo, Jawa Tengah 57513<br>
+          Phone: 0822-6420-3544<br>
         </address>
       </div>
       <!-- /.col -->
@@ -393,7 +391,7 @@
     <div class="row">
       <div class="col-xs-12">
         <h2 class="page-header">
-          <i class="fa fa-globe"></i> KWITANSI TANDA TERIMA NOTA KREDIT - NAMA DEALER.
+          <i class="fa fa-globe"></i> KWITANSI TANDA TERIMA NOTA KREDIT - Dealer Putra Utama Motor.
           <small class="pull-right"><?php echo $now; ?></small>
         </h2>
       </div>
@@ -404,11 +402,10 @@
       <div class="col-sm-4 invoice-col">
         From
         <address>
-          <strong>Nama Dealer</strong><br>
-          ALamat Line 1<br>
-          Alamat Line 2<br>
-          Phone: --<br>
-          Email: --
+          <strong>Dealer Putra Utama Motor</strong><br>
+          Jalan Slamet Riyadi Gayam, Johosari, Joho, <br>
+          Kec. Sukoharjo, Kabupaten Sukoharjo, Jawa Tengah 57513<br>
+          Phone: 0822-6420-3544<br>
         </address>
       </div>
       <!-- /.col -->
@@ -568,11 +565,10 @@
       <div class="col-sm-4 invoice-col">
         From
         <address>
-          <strong>Nama Dealer</strong><br>
-          ALamat Line 1<br>
-          Alamat Line 2<br>
-          Phone: --<br>
-          Email: --
+          <strong>Dealer Putra Utama Motor</strong><br>
+          Jalan Slamet Riyadi Gayam, Johosari, Joho, <br>
+          Kec. Sukoharjo, Kabupaten Sukoharjo, Jawa Tengah 57513<br>
+          Phone: 0822-6420-3544<br>
         </address>
       </div>
       <!-- /.col -->
@@ -702,11 +698,10 @@
       <div class="col-sm-4 invoice-col">
         From
         <address>
-          <strong>Nama Dealer</strong><br>
-          ALamat Line 1<br>
-          Alamat Line 2<br>
-          Phone: --<br>
-          Email: --
+          <strong>Dealer Putra Utama Motor</strong><br>
+          Jalan Slamet Riyadi Gayam, Johosari, Joho, <br>
+          Kec. Sukoharjo, Kabupaten Sukoharjo, Jawa Tengah 57513<br>
+          Phone: 0822-6420-3544<br>
         </address>
       </div>
       <!-- /.col -->

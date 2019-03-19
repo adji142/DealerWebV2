@@ -14,7 +14,7 @@ $userid = $_SESSION['userid'];
   }
 ?>
 <meta charset="utf-8">
-<title>Nama Dealer</title>
+<title>Dealer Putra Utama Motor</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link href="asset/css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@ $userid = $_SESSION['userid'];
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
-                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="index.php">Nama Dealer</a>
+                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="index.php">Dealer Putra Utama Motor</a>
       <div class="nav-collapse">
         <ul class="nav pull-right">
           <li class="dropdown"><a href="process/logout.php" class="dropdown-toggle"><i class="icon-cog"></i> Logout <b class="caret"></b></a>
