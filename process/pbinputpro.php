@@ -6,20 +6,19 @@
 	$id = '';
 	$detail = '';
 
-	$nonota = $_POST['nonota'];
-	$tglnota = $_POST['tglnota'];
-	$tglterima	  = $_POST['tglterima'];
-	$vendor	  = $_POST['vendor'];
-	$stock	  = $_POST['stock'];
-	$qty	  = $_POST['qty'];
-	$Harga	  = $_POST['hrg'];
-	$user	  = $_POST['user'];
+	if(isset($_POST['nonota']))$nonota = $_POST['nonota'];
+	if(isset($_POST['tglnota']))$tglnota = $_POST['tglnota'];
+	// $tglterima	  = $_POST['tglterima'];
+	// $vendor	  = $_POST['vendor'];
+	if(isset($_POST['stock']))$stock	  = $_POST['stock'];
+	if(isset($_POST['qty']))$qty	  = $_POST['qty'];
+	// $Harga	  = $_POST['hrg'];
 	$now	  = date("Y-m-d");
 
 	// other 
-	if(isset($_GET['id']))$id = $_GET['id'];
-	if(isset($_GET['detail']))$detail = $_GET['detail'];
-	if(isset($_GET['mode']))$mode = $_GET['mode'];
+	if(isset($_GET['id'])) $id = $_GET['id'];
+	if(isset($_GET['detail'])) $detail = $_GET['detail'];
+	if(isset($_GET['mode'])) $mode = $_GET['mode'];
 
 	if($mode == 'delete'){
 		if($detail){
@@ -42,7 +41,8 @@
 			}
 		}
 		else{
-			$delete = mysqli_query($Open,"delete from pembelian where id = $id");
+			echo $id;
+			$delete = mysqli_query($Open,"delete from tabelstok where id = $id");
 			if($delete){
 				echo "
 					<script>
@@ -62,39 +62,9 @@
 		}
 	}
 	else{
-
-	$rs = mysqli_query($Open,"Select * from pembelian where nonota = '$nonota' and tglnota = '$tglnota'");
-	$rowcount=mysqli_num_rows($rs);
-
-	if($rowcount == 0){
-		$input	="INSERT INTO pembelian (nonota,tglnota,tglterima,vendorid,createdby,createdon) 
+		$inputdetail	="INSERT INTO tabelstok (notransaksi,tgltransaksi,barangid,qty,hrgbrg) 
 		VALUES 
-		('$nonota','$tglnota','$tglterima',$vendor,'$user','$now')";
-		$query_input =mysqli_query($Open,$input);
-		if($query_input){
-			$idpembelian = mysqli_insert_id($Open);
-			$inputdetail	="INSERT INTO pembeliandetail (pembelianid,stockid,qtybeli,hrgbeli,createdby,createdon) 
-			VALUES 
-			($idpembelian,$stock,$qty,$Harga,'$user','$now')";
-			$query_inputD =mysqli_query($Open,$inputdetail);
-			if($query_inputD){
-				$data['success'] = true;
-			}
-			else{
-				$data['message'] = 'E500-03'; // gagal input
-			}
-		}
-		else
-		{
-			$data['message'] = 'E500-03'; // gagal input
-		}
-	}
-	else{
-		$row = mysqli_fetch_assoc($rs);
-		$idpembelian = $row['id'];
-		$inputdetail	="INSERT INTO pembeliandetail (pembelianid,stockid,qtybeli,hrgbeli,createdby,createdon) 
-		VALUES 
-		($idpembelian,$stock,$qty,$Harga,'$user','$now')";
+		('$nonota','$tglnota',$stock,$qty,0)";
 		$query_inputD =mysqli_query($Open,$inputdetail);
 		if($query_inputD){
 			$data['success'] = true;
@@ -102,7 +72,6 @@
 		else{
 			$data['message'] = 'E500-03'; // gagal input
 		}
-	}
 }
 	echo json_encode($data);
 ?>

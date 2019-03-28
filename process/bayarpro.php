@@ -51,7 +51,7 @@ if($pelunasan == "ya"){
 	$totalangsuran = $row['saldo'];
 }
 
-if ($tgljatuhtempoori < $dateofserver) {
+if ($tgljatuhtempoori < $now && $tgljatuhtempoori!='') {
 	$denda = round($totalangsuran * 0.5 / 100);
 }
 

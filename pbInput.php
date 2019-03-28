@@ -35,7 +35,7 @@ if ($detail > 0){
 				<div class="span12">
 					<div class="widget widget-nopad">
 						<div class="widget-header"> <i class="icon-list-alt"></i>
-			            	<h3>Tambah Transaksi Pembelian</h3>
+			            	<h3>Tambah Transaksi Stock</h3>
 			            </div>
 			            <br>
 			            <!-- <div class="tab-content"> -->
@@ -43,50 +43,17 @@ if ($detail > 0){
 			            		<form id="edit-profile" class="form-horizontal" enctype='application/json'>
 			            			<fieldset>
 			            				<div class="control-group">
-											<label class="control-label" for="username">Nomer Nota</label>
+											<label class="control-label" for="username">Nomer Transaksi</label>
 											<div class="controls">
-												<input type="text" class="span6 disabled" id="nonota" placeholder="Nomer Nota" required="" name="nonota" <?php echo $desable ; ?> value = "<?php echo $nonota;?>">
+												<input type="text" class="span6 disabled" id="nonota" placeholder="Nomer Transaksi" required="" name="nonota" <?php echo $desable ; ?> value = "<?php echo $nonota;?>">
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										<div class="control-group">
-											<label class="control-label" for="nama">Tanggal Nota</label>
+											<label class="control-label" for="nama">Tanggal Transaksi</label>
 											<div class="controls">
 												<input type="date" class="span6 disabled" id="tglnota" placeholder="Tanggal Nota" required="" name="tglnota" <?php echo $desable; ?> value = "<?php echo $tglnota ?>">
 											</div> <!-- /controls -->				
-										</div> <!-- /control-group -->
-										<div class="control-group">
-											<label class="control-label" for="nama">Tanggal Terima Nota</label>
-											<div class="controls">
-												<input type="date" class="span6 disabled" id="tglterima" placeholder="Tanggal Terima Nota" required="" name="tglterima" <?php echo $desable; ?> value = "<?php echo $tglterima ?>">
-											</div> <!-- /controls -->				
-										</div> <!-- /control-group -->
-										<div class="control-group">
-											<label class="control-label" for="nama">Vendor</label>
-											<div class="controls">
-												<select class="form-control select2" name="vendor" id="vendor" <?php echo $desable; ?>>
-													<?php
-													if($id != 0){
-														$rs = mysqli_query($Open,"
-											            select * from vendor where id = $vendorid
-											            ");
-													}
-													else{
-														$rs = mysqli_query($Open,"
-											            select * from vendor
-											            ");
-													}
-											            while ($rsx = mysqli_fetch_array($rs)) {
-											            	$id = stripslashes ($rsx['id']);
-											            	$Namavendor = stripslashes ($rsx['namavendor']);
-											            	$KodeVendor = stripslashes ($rsx['kodevendor']);
-
-											            	echo "<option value = '".$id."'>".$KodeVendor ." | ".$Namavendor."</option>";
-											            }
-													?>
-								                </select>
-
-											</div> <!-- /controls -->				
-										</div> <!-- /control-group -->
+										</div>
 										<div class="control-group">
 											<label class="control-label" for="nama">Barang</label>
 											<div class="controls">
@@ -112,14 +79,6 @@ if ($detail > 0){
 											<label class="control-label" for="nama">Jumlah</label>
 											<div class="controls">
 												<input type="number" class="span6 disabled" id="qty" placeholder="Jumlah" required="" name="qty">
-											</div>
-										</div>
-										<div class="control-group">
-											<label class="control-label" for="nama">Harga Beli</label>
-											<div class="controls">
-												<input type="number" class="span6 disabled" id="hrg" placeholder="Harga" required="" name="hrg">
-												<input type="hidden" class="span6 disabled" id="user"  required="" name="user" value="<?php echo $username;?>">
-												
 											</div>
 										</div>
 										<div class="form-actions">

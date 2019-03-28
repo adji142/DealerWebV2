@@ -26,12 +26,15 @@ include 'parts/header.php';
 								        <th>Warna</th>
 								        <th>Harga</th>
 								        <th>DP</th>
+								        <th>Bunga</th>
 			            			</thead>
 			            			<tbody>
 			            				
 			            					<?php
 			            						$rs = mysqli_query($Open,"
-									            select a.id,a.nonota,a.tglnota,mc.nama,s.namabarang,s.warna,b.hrgotr,a.jenistrx,coalesce(SUM(pd.kredit),0) dp from penjualan a
+									            select a.id,a.nonota,a.tglnota,mc.nama,s.namabarang,s.warna,b.hrgotr,a.jenistrx,coalesce(SUM(pd.kredit),0) dp,
+									            case when a.jenistrx = 'K' then '2%' else '' end bunga
+									            from penjualan a
 												left join penjualandetail b on a.id= b.penjualanid
 												left join mastercustomer mc on mc.id = a.customerid
 												left join stok s on s.id = b.stockid
@@ -49,19 +52,21 @@ include 'parts/header.php';
 										            $hrgotr = stripslashes ($rsx['hrgotr']);
 										            $dp = stripslashes ($rsx['dp']);
 										            $trx = stripslashes ($rsx['jenistrx']);
+										            $kembang = stripslashes ($rsx['bunga']);
 										            echo "
 										            <tr>
 										              <td>
 										              <a href = 'process/pjinputpro.php?id=".$id."&dp=".$dp."&mode=cetak' class='btn btn-info'>Cetak</a>
 										              </td>
 										              <td>".$nonota."</td>
-										              <td>".$tglnota."</td>
+										              <td>".date('d-m-y',strtotime($tglnota))."</td>
 										              <td>".$trx."</td>
 										              <td>".$nama."</td>
 										              <td>".$namabarang."</td>
 										              <td>".$warna."</td>
-										              <td>".$hrgotr."</td>
-										              <td>".$dp."</td>
+										              <td>".number_format($hrgotr)."</td>
+										              <td>".number_format($dp)."</td>
+										              <td>".$kembang."</td>
 										            </tr>
 										            ";
 										          }
