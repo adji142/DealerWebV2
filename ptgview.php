@@ -33,17 +33,17 @@ include 'parts/header.php';
 			            					<?php
 			            						$rs = mysqli_query($Open,"
 									            select p.id,pj.nonota,convert(pj.tglnota,date)tglnota,p.debet otr,
-												SUM(case when pd.src ='DP' then kredit else 0 end) dp,
-												SUM(case when pd.src !='DP' then kredit else 0 end) pembayaran,
-												p.debet - SUM(COALESCE(pd.kredit,0)) saldo,
-												max(pd.tgljatuhtempo) jt,
-												COUNT(case when pd.src != 'DP' then 1 else null end) angsuranke,
-												SUM(denda) denda
-												from piutang p
-												left join piutangdetail pd on p.id = pd.piutangid
-												left join penjualan pj on p.penjualanid = pj.id
-												where (select SUM(kredit) from piutangdetail where piutangid = p.id) < p.debet
-												group by pj.nonota,pj.tglnota,p.debet
+															SUM(case when pd.src ='DP' then kredit else 0 end) dp,
+															SUM(case when pd.src !='DP' then kredit else 0 end) pembayaran,
+															p.debet - SUM(COALESCE(pd.kredit,0)) saldo,
+															max(pd.tgljatuhtempo) jt,
+															COUNT(case when pd.src != 'DP' then 1 else null end) angsuranke,
+															SUM(denda) denda
+															from piutang p
+															left join piutangdetail pd on p.id = pd.piutangid
+															left join penjualan pj on p.penjualanid = pj.id
+															where (select SUM(kredit) from piutangdetail where piutangid = p.id) < p.debet
+															group by pj.nonota,pj.tglnota,p.debet
 									            ");
 									            while ($rsx = mysqli_fetch_array($rs)) {
 										            $id = stripslashes ($rsx['id']);
