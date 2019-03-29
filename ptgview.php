@@ -63,13 +63,13 @@ include 'parts/header.php';
 										              </td>
 										              <td>".$nonota."</td>
 										              <td>".$tglnota."</td>
-										              <td>".$otr."</td>
-										              <td>".$dp."</td>
+										              <td>".number_format($otr)."</td>
+										              <td>".number_format($dp)."</td>
 										              <td>".$angsuranke."</td>
 										              <td>".$jt."</td>
-										              <td>".$pembayaran."</td>
+										              <td>".number_format($pembayaran)."</td>
 										              <td>".$denda."</td>
-										              <td>".$saldo."</td>
+										              <td>".number_format($saldo)."</td>
 										            </tr>
 										            ";
 										          }

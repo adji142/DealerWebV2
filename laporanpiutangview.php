@@ -64,7 +64,7 @@ include 'parts/header.php';
 
 			            						$rs = mysqli_query($Open,"
 
-									            select ms.nama,pj.nonota,pj.tempo,pj.jenistrx,CONVERT(pj.tglnota,date) tglnota,pd.tgljatuhtempo,pd.src,p.debet,pd.kredit
+									            select ms.nama,pj.nonota,pj.tempo,pj.jenistrx,CONVERT(pj.tglnota,date) tglnota,pd.tgljatuhtempo,pd.src,coalesce(p.debet,0) debet,coalesce(pd.kredit,0) + coalesce(pd.denda,0) kredit
 
 												from piutang p
 
