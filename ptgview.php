@@ -36,9 +36,9 @@ include 'parts/header.php';
 												SUM(case when pd.src ='DP' then kredit else 0 end) dp,
 												SUM(case when pd.src !='DP' then kredit else 0 end) pembayaran,
 												p.debet - SUM(COALESCE(pd.kredit,0)) saldo,
-												DATE_ADD(max(pd.tgljatuhtempo),INTERVAL 1 Month) jt,
+												max(pd.tgljatuhtempo) jt,
 												COUNT(case when pd.src != 'DP' then 1 else null end) angsuranke,
-												SUM(coalesce(denda,0)) denda
+												SUM(denda) denda
 												from piutang p
 												left join piutangdetail pd on p.id = pd.piutangid
 												left join penjualan pj on p.penjualanid = pj.id
@@ -62,14 +62,14 @@ include 'parts/header.php';
 										              <button class='btn btn-info' id='bayar' value = '".$id."' name ='".$nonota."'>Bayar</button>
 										              </td>
 										              <td>".$nonota."</td>
-										              <td>".date('d-m-y',strtotime($tglnota))."</td>
-										              <td>".number_format($otr)."</td>
-										              <td>".number_format($dp)."</td>
+										              <td>".$tglnota."</td>
+										              <td>".$otr."</td>
+										              <td>".$dp."</td>
 										              <td>".$angsuranke."</td>
-										              <td>".date('d-m-y',strtotime($jt))."</td>
-										              <td>".number_format($pembayaran)."</td>
-										              <td>".number_format($denda)."</td>
-										              <td>".number_format($saldo)."</td>
+										              <td>".$jt."</td>
+										              <td>".$pembayaran."</td>
+										              <td>".$denda."</td>
+										              <td>".$saldo."</td>
 										            </tr>
 										            ";
 										          }
@@ -337,8 +337,10 @@ include 'parts/footer.php';
 					var jt = new Date(v.jt);
 					var denda = 0;
 					var angsuranpokok = 0;
-					
+					9
 					angsuranpokok = Math.round(angsuran) + Math.round(bunga);
+					// alert(jt)
+					// alert(now)
 					if(jt < now && jt != 'Wed Jan 01 1000 07:07:12 GMT+0707 (Western Indonesia Time)'){
 						denda = angsuranpokok * 0.5/100;
 					}
