@@ -37,7 +37,7 @@ if (isset($_GET['id']))
 				<div class="span12">
 					<div class="widget widget-nopad">
 						<div class="widget-header"> <i class="icon-list-alt"></i>
-			            	<h3>Tambah Master Stock Baru</h3>
+			            	<h3>Tambah Master Customer Baru</h3>
 			            </div>
 			            <br>
 			            <!-- <div class="tab-content"> -->
@@ -65,7 +65,7 @@ if (isset($_GET['id']))
 										<div class="control-group">
 											<label class="control-label" >Kode POS</label>
 											<div class="controls">
-												<input type="text" class="span6 disabled" id="kodepos" placeholder="Nomer Mesin" required="" name="kodepos" <?php echo $desable ?> value = "<?php echo $pos; ?>" >
+												<input type="text" class="span6 disabled" id="kodepos" placeholder="Kode Pos" required="" name="kodepos" <?php echo $desable ?> value = "<?php echo $pos; ?>" >
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										<div class="control-group">
