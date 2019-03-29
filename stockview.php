@@ -28,9 +28,9 @@ include 'parts/header.php';
 			            				
 			            					<?php
 			            						$rs = mysqli_query($Open,"
-									            select *, (select sum(pb.qtybeli) from pembeliandetail pb where pb.stockid = s.id )Pembelian ,
+									            select *, (select sum(pb.qty) from tabelstok pb where pb.barangid = s.id )Pembelian ,
 												(select sum(pb.qty) from penjualandetail pb where pb.stockid = s.id ) penjualan,
-												(select sum(pb.qtybeli) from pembeliandetail pb where pb.stockid = s.id ) - 
+												(select sum(pb.qty) from tabelstok pb where pb.barangid = s.id ) - 
 												(select sum(pb.qty) from penjualandetail pb where pb.stockid = s.id ) qtyakhir
 												from stok s
 									            ");
