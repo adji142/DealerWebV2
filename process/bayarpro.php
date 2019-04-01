@@ -18,7 +18,7 @@ if (isset($_POST['pelunasan'])) $pelunasan = $_POST['pelunasan'];
 // print_r($id);
 $rs = mysqli_query($Open,"
 		select p.id,pj.nonota,pj.tglnota,p.debet otr,pj.tempo,pd.tgljatuhtempo,
-		SUM(case when pd.src ='DP' then kredit else 0 end) dp,
+		SUM(case when pd.src ='DP' then kredit else (SELECT x.kredit from piutangdetail x where x.piutangid = 1 and x.src = 'DP' ) end) dp,
 		SUM(case when pd.src !='DP' then kredit else 0 end) pembayaran,
 		p.debet - SUM(COALESCE(pd.kredit,0)) saldo,
 		MAX(case when src != 'DP' then pd.tgljatuhtempo when src = 'DP' then date_add(pd.tgljatuhtempo,INTERVAL 1 Month) else '' end) jt,
