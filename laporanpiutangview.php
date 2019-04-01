@@ -73,7 +73,7 @@ include 'parts/header.php';
 												inner join penjualan pj on pj.id = p.penjualanid
 
 												inner join mastercustomer ms on ms.id = pj.customerid
-
+												order by pj.tglnota desc
 									            ");
 
 									            while ($rsx = mysqli_fetch_array($rs)) {
