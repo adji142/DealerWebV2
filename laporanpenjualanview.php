@@ -73,6 +73,7 @@ include 'parts/header.php';
 												left join stok s on s.id = b.stockid
 
 												group by a.nonota,a.tglnota,a.tempo,a.jenistrx,s.namabarang,s.warna,s.nomesin,s.norangka
+												order by a.tglnota desc
 
 									            ");
 
