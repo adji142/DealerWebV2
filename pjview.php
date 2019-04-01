@@ -41,6 +41,7 @@ include 'parts/header.php';
 												left join piutang p on p.penjualanid = a.id
 												left join piutangdetail pd on pd.piutangid = p.id and pd.src = 'DP'
 												group by a.nonota,a.tglnota,mc.nama,s.namabarang,s.warna,b.hrgotr,a.jenistrx
+												order by a.tglnota desc
 									            ");
 									            while ($rsx = mysqli_fetch_array($rs)) {
 										            $id = stripslashes ($rsx['id']);

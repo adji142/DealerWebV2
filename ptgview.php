@@ -44,6 +44,7 @@ include 'parts/header.php';
 															left join penjualan pj on p.penjualanid = pj.id
 															where (select SUM(kredit) from piutangdetail where piutangid = p.id) < p.debet
 															group by pj.nonota,pj.tglnota,p.debet
+															order by pj.tglnota desc
 									            ");
 									            while ($rsx = mysqli_fetch_array($rs)) {
 										            $id = stripslashes ($rsx['id']);

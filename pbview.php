@@ -31,6 +31,7 @@ include 'parts/header.php';
 									            select a.id,a.notransaksi,a.tgltransaksi,s.namabarang,s.warna,a.qty
 												from tabelstok a
 												inner join stok s on a.barangid = s.id
+												order by a.tgltransaksi desc
 									            ");
 									            while ($rsx = mysqli_fetch_array($rs)) {
 										            $id = stripslashes ($rsx['id']);

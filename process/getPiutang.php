@@ -5,7 +5,7 @@
 	try {
 		$rs = mysqli_query($Open,"
 		select p.id,pj.nonota,pj.tglnota,p.debet otr,pj.tempo,
-		(select SUM(kredit) from piutangdetail where id = p.id and src = 'DP') dp,
+		(select SUM(kredit) from piutangdetail where piutangid = p.id and src = 'DP') dp,
 		SUM(case when pd.src !='DP' then kredit else 0 end) pembayaran,
 		p.debet - SUM(COALESCE(pd.kredit,0)) saldo,
 		MAX(case when src != 'DP' then pd.tgljatuhtempo when src = 'DP' then date_add(pd.tgljatuhtempo,INTERVAL 1 Month) else '1000-01-01' end) jt,
