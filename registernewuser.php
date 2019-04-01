@@ -37,7 +37,7 @@ include 'parts/header.php';
 											<label class="control-label">Roles</label>
                                             <div class="controls">
 	                                            <label class="radio inline">
-	                                              <input type="radio"  name="role" id = "pb" value="pb"> Pembelian
+	                                              <input type="radio"  name="role" id = "pb" value="pb"> Stock
 	                                            </label>
                                             
 	                                            <label class="radio inline">
