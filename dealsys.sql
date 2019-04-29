@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost
+ Source Server         : koprasiwanitausahamandiri.com
  Source Server Type    : MySQL
- Source Server Version : 100136
- Source Host           : localhost:3306
- Source Schema         : dealsys
+ Source Server Version : 100221
+ Source Host           : 83.136.216.91:3306
+ Source Schema         : u6018530_dealsys
 
  Target Server Type    : MySQL
- Target Server Version : 100136
+ Target Server Version : 100221
  File Encoding         : 65001
 
- Date: 23/02/2019 09:19:31
+ Date: 29/04/2019 17:57:42
 */
 
 SET NAMES utf8mb4;
@@ -37,13 +37,14 @@ CREATE TABLE `mastercustomer`  (
   `createdon` datetime(6) NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of mastercustomer
 -- ----------------------------
-INSERT INTO `mastercustomer` VALUES (1, '12345678', 'JL. PADALARANG DS. PASIR HALANG KP. CIKARANG MULYA RT 3 RW 5', '57135', 'Surakarta - Kota', '2019-02-20', '123456', NULL, NULL, NULL, '', 'admin', '2019-02-22 00:00:00.000000', 'Prasetyo Aji Wibowo 1 ');
-INSERT INTO `mastercustomer` VALUES (3, '67871923879', 'sementara', '123123', 'Surakarta - Kota', '2019-02-23', '081', NULL, NULL, NULL, '', 'admin', '2019-02-23 00:00:00.000000', 'Temporary');
+INSERT INTO `mastercustomer` VALUES (1, '12345678', 'JL. PADALARANG DS. PASIR HALANG KP. CIKARANG MULYA RT 3 RW 5', '57135', 'Surakarta - Kota', '2019-02-20', '123456', NULL, NULL, NULL, '', 'admin', '2019-02-22 00:00:00.000000', 'Adi Sebastiano');
+INSERT INTO `mastercustomer` VALUES (3, '67871923879', 'Jln Wonogiri No.019,', '123123', 'Surakarta - Kota', '2019-02-23', '081', NULL, NULL, NULL, '', 'admin', '2019-02-23 00:00:00.000000', 'Francisco');
+INSERT INTO `mastercustomer` VALUES (4, '3311902938400201', 'Jln Solo-Wonogiri no 18', '57571', 'wonogiri', '1990-11-22', '081234688778', NULL, NULL, NULL, '', 'admin', '2019-04-01 00:00:00.000000', 'Singgih Nurcahyanto');
 
 -- ----------------------------
 -- Table structure for pembelian
@@ -106,13 +107,21 @@ CREATE TABLE `penjualan`  (
   `tgljatuhtempo` date NULL DEFAULT NULL,
   `jenistrx` varchar(2) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of penjualan
 -- ----------------------------
-INSERT INTO `penjualan` VALUES (12, 1, 'NT0001', '2019-02-23 00:00:00.000000', 'JL. PADALARANG DS. PASIR HALANG KP. CIKARANG MULYA RT 3 RW 5', 0, 'admin', '2019-02-23 00:00:00.000000', '2019-02-23', 'T');
-INSERT INTO `penjualan` VALUES (13, 3, 'NT00013', '2019-02-23 00:00:00.000000', 'sementara', 36, 'admin', '2019-02-23 00:00:00.000000', '2022-02-23', 'K');
+INSERT INTO `penjualan` VALUES (1, 1, 'NT0001', '2019-04-01 00:00:00.000000', 'sementara', 12, 'admin', '2019-04-01 00:00:00.000000', '2020-04-01', 'K');
+INSERT INTO `penjualan` VALUES (2, 1, 'NT0002', '2019-04-01 00:00:00.000000', 'sementara', 12, 'admin', '2019-04-01 00:00:00.000000', '2020-04-01', 'K');
+INSERT INTO `penjualan` VALUES (3, 3, 'NT0003', '2019-04-01 00:00:00.000000', 'sementara', 35, 'admin', '2019-04-01 00:00:00.000000', '2022-03-01', 'K');
+INSERT INTO `penjualan` VALUES (4, 1, 'NT0004', '2019-04-01 00:00:00.000000', 'Jln Solo-Wonogiri no 18', 36, 'admin', '2019-04-01 00:00:00.000000', '2022-04-01', 'K');
+INSERT INTO `penjualan` VALUES (5, 4, 'NT0005', '2019-04-01 00:00:00.000000', 'Jln Solo-Wonogiri no 18', 36, 'admin', '2019-04-01 00:00:00.000000', '2022-04-01', 'K');
+INSERT INTO `penjualan` VALUES (6, 4, 'NT0006', '2019-04-01 00:00:00.000000', 'Jln Solo-Wonogiri no 18', 35, 'admin', '2019-04-01 00:00:00.000000', '2022-03-01', 'K');
+INSERT INTO `penjualan` VALUES (7, 1, 'NT0007', '2019-04-01 00:00:00.000000', 'Jln Solo-Wonogiri no 18', 35, 'admin', '2019-04-01 00:00:00.000000', '2022-03-01', 'K');
+INSERT INTO `penjualan` VALUES (8, 1, 'NT0008', '2019-04-01 00:00:00.000000', 'Jln Solo-Wonogiri no 18', 35, 'admin', '2019-04-01 00:00:00.000000', '2022-03-01', 'K');
+INSERT INTO `penjualan` VALUES (9, 3, 'NT0009', '2019-04-01 00:00:00.000000', 'Jln Solo-Wonogiri no 18', 30, 'admin', '2019-04-01 00:00:00.000000', '2021-10-01', 'K');
+INSERT INTO `penjualan` VALUES (10, 4, 'NT00010', '2019-04-02 00:00:00.000000', 'Jln Solo-Wonogiri no 18', 36, 'admin', '2019-04-02 00:00:00.000000', '2022-04-02', 'K');
 
 -- ----------------------------
 -- Table structure for penjualandetail
@@ -127,13 +136,21 @@ CREATE TABLE `penjualandetail`  (
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of penjualandetail
 -- ----------------------------
-INSERT INTO `penjualandetail` VALUES (8, 12, 1, 1, 15000000.00, 'admin', '2019-02-23 00:00:00.000000');
-INSERT INTO `penjualandetail` VALUES (9, 13, 1, 1, 15000000.00, 'admin', '2019-02-23 00:00:00.000000');
+INSERT INTO `penjualandetail` VALUES (1, 1, 1, 1, 17000000.00, 'admin', '2019-04-01 00:00:00.000000');
+INSERT INTO `penjualandetail` VALUES (2, 2, 1, 1, 17000000.00, 'admin', '2019-04-01 00:00:00.000000');
+INSERT INTO `penjualandetail` VALUES (3, 3, 1, 1, 25000000.00, 'admin', '2019-04-01 00:00:00.000000');
+INSERT INTO `penjualandetail` VALUES (4, 4, 1, 1, 27950000.00, 'admin', '2019-04-01 00:00:00.000000');
+INSERT INTO `penjualandetail` VALUES (5, 5, 2, 1, 27950000.00, 'admin', '2019-04-01 00:00:00.000000');
+INSERT INTO `penjualandetail` VALUES (6, 6, 1, 1, 20000000.00, 'admin', '2019-04-01 00:00:00.000000');
+INSERT INTO `penjualandetail` VALUES (7, 7, 1, 1, 20000000.00, 'admin', '2019-04-01 00:00:00.000000');
+INSERT INTO `penjualandetail` VALUES (8, 8, 2, 1, 30000000.00, 'admin', '2019-04-01 00:00:00.000000');
+INSERT INTO `penjualandetail` VALUES (9, 9, 1, 1, 19000000.00, 'admin', '2019-04-01 00:00:00.000000');
+INSERT INTO `penjualandetail` VALUES (10, 10, 2, 1, 26000000.00, 'admin', '2019-04-02 00:00:00.000000');
 
 -- ----------------------------
 -- Table structure for permission
@@ -151,15 +168,40 @@ CREATE TABLE `permission`  (
 -- Records of permission
 -- ----------------------------
 INSERT INTO `permission` VALUES (0, 'Master Customer', '#', 'icon-comment');
-INSERT INTO `permission` VALUES (1, 'Nota Pembelian', 'pbview.php', 'icon-pencil');
+INSERT INTO `permission` VALUES (1, 'Tambah Stock', 'pbview.php', 'icon-pencil');
 INSERT INTO `permission` VALUES (2, 'Nota Penjualan', 'pjview.php', 'icon-shopping-cart');
-INSERT INTO `permission` VALUES (3, 'Angsuran', '#', 'icon-money');
-INSERT INTO `permission` VALUES (4, 'Master Stock', 'stockview.php', 'icon-plus-sign');
-INSERT INTO `permission` VALUES (5, 'Master Vendor', 'vendorview.php', 'icon-flag');
+INSERT INTO `permission` VALUES (3, 'Angsuran', 'ptgview.php', 'icon-money');
+INSERT INTO `permission` VALUES (4, 'Master Barang', 'stockview.php', 'icon-plus-sign');
 INSERT INTO `permission` VALUES (6, 'User', 'userview.php', 'icon-user-md');
-INSERT INTO `permission` VALUES (7, 'Laporan Penjualan', '#', 'icon-bar-chart');
-INSERT INTO `permission` VALUES (8, 'Laporan Angsuran', '#', 'icon-credit-card');
+INSERT INTO `permission` VALUES (7, 'Laporan Penjualan', 'laporanpenjualanview.php', 'icon-bar-chart');
+INSERT INTO `permission` VALUES (8, 'Laporan Angsuran', 'laporanpiutangview.php', 'icon-credit-card');
 INSERT INTO `permission` VALUES (9, 'Master Customer', 'custview.php', 'icon-comment');
+
+-- ----------------------------
+-- Table structure for permission_copy1
+-- ----------------------------
+DROP TABLE IF EXISTS `permission_copy1`;
+CREATE TABLE `permission_copy1`  (
+  `id` int(11) NOT NULL,
+  `permissionname` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `link` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `ico` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of permission_copy1
+-- ----------------------------
+INSERT INTO `permission_copy1` VALUES (0, 'Master Customer', '#', 'icon-comment');
+INSERT INTO `permission_copy1` VALUES (1, 'Nota Pembelian', 'pbview.php', 'icon-pencil');
+INSERT INTO `permission_copy1` VALUES (2, 'Nota Penjualan', 'pjview.php', 'icon-shopping-cart');
+INSERT INTO `permission_copy1` VALUES (3, 'Angsuran', 'ptgview.php', 'icon-money');
+INSERT INTO `permission_copy1` VALUES (4, 'Master Stock', 'stockview.php', 'icon-plus-sign');
+INSERT INTO `permission_copy1` VALUES (5, 'Master Vendor', 'vendorview.php', 'icon-flag');
+INSERT INTO `permission_copy1` VALUES (6, 'User', 'userview.php', 'icon-user-md');
+INSERT INTO `permission_copy1` VALUES (7, 'Laporan Penjualan', 'laporanpenjualanview.php', 'icon-bar-chart');
+INSERT INTO `permission_copy1` VALUES (8, 'Laporan Angsuran', 'laporanpiutangview.php', 'icon-credit-card');
+INSERT INTO `permission_copy1` VALUES (9, 'Master Customer', 'custview.php', 'icon-comment');
 
 -- ----------------------------
 -- Table structure for permissionrole
@@ -203,13 +245,21 @@ CREATE TABLE `piutang`  (
   `createdon` datetime(6) NULL DEFAULT NULL,
   `penjualanid` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of piutang
 -- ----------------------------
-INSERT INTO `piutang` VALUES (16, 1, 15000000.00, 'admin', '2019-02-23 00:00:00.000000', 12);
-INSERT INTO `piutang` VALUES (17, 3, 11000000.00, 'admin', '2019-02-23 00:00:00.000000', 13);
+INSERT INTO `piutang` VALUES (1, 1, 17000000.00, 'admin', '2019-04-01 00:00:00.000000', 1);
+INSERT INTO `piutang` VALUES (2, 1, 17000000.00, 'admin', '2019-04-01 00:00:00.000000', 2);
+INSERT INTO `piutang` VALUES (3, 3, 25000000.00, 'admin', '2019-04-01 00:00:00.000000', 3);
+INSERT INTO `piutang` VALUES (4, 1, 27950000.00, 'admin', '2019-04-01 00:00:00.000000', 4);
+INSERT INTO `piutang` VALUES (5, 4, 27950000.00, 'admin', '2019-04-01 00:00:00.000000', 5);
+INSERT INTO `piutang` VALUES (6, 4, 20000000.00, 'admin', '2019-04-01 00:00:00.000000', 6);
+INSERT INTO `piutang` VALUES (7, 1, 20000000.00, 'admin', '2019-04-01 00:00:00.000000', 7);
+INSERT INTO `piutang` VALUES (8, 1, 30000000.00, 'admin', '2019-04-01 00:00:00.000000', 8);
+INSERT INTO `piutang` VALUES (9, 3, 19000000.00, 'admin', '2019-04-01 00:00:00.000000', 9);
+INSERT INTO `piutang` VALUES (10, 4, 26000000.00, 'admin', '2019-04-02 00:00:00.000000', 10);
 
 -- ----------------------------
 -- Table structure for piutangdetail
@@ -223,14 +273,59 @@ CREATE TABLE `piutangdetail`  (
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
   `src` varchar(5) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `denda` decimal(19, 2) NULL DEFAULT NULL,
+  `tgltrx` date NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 52 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of piutangdetail
 -- ----------------------------
-INSERT INTO `piutangdetail` VALUES (16, 16, 15000000.00, '2019-02-23', 'admin', '2019-02-23 00:00:00.000000', 'KAS');
-INSERT INTO `piutangdetail` VALUES (17, 17, 4000000.00, '2019-02-23', 'admin', '2019-02-23 00:00:00.000000', 'DP');
+INSERT INTO `piutangdetail` VALUES (1, 1, 2000000.00, '2019-04-01', 'admin', '2019-04-01 00:00:00.000000', 'DP', NULL, NULL);
+INSERT INTO `piutangdetail` VALUES (2, 2, 2000000.00, '2019-04-01', 'admin', '2019-04-01 00:00:00.000000', 'DP', NULL, NULL);
+INSERT INTO `piutangdetail` VALUES (8, 3, 5000000.00, '2019-04-01', 'admin', '2019-04-01 00:00:00.000000', 'DP', NULL, NULL);
+INSERT INTO `piutangdetail` VALUES (9, 1, 1550000.00, '2019-05-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (10, 3, 971429.00, '2019-05-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (11, 3, 1117143.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (12, 2, 1550000.00, '2019-05-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (13, 2, 1550000.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (14, 2, 1343333.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (15, 2, 1136667.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (16, 1, 1550000.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (17, 4, 4800000.00, '2019-04-01', 'admin', '2019-04-01 00:00:00.000000', 'DP', NULL, NULL);
+INSERT INTO `piutangdetail` VALUES (18, 5, 4800000.00, '2019-04-01', 'admin', '2019-04-01 00:00:00.000000', 'DP', NULL, NULL);
+INSERT INTO `piutangdetail` VALUES (19, 4, 1335389.00, '2019-05-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (20, 4, 1335389.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (21, 4, 1335389.00, '2019-06-01', '', '2020-06-02 00:00:00.000000', 'KAS', 6677.00, '2020-06-02');
+INSERT INTO `piutangdetail` VALUES (22, 4, 23943833.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (23, 6, 4000000.00, '2019-04-01', 'admin', '2019-04-01 00:00:00.000000', 'DP', NULL, NULL);
+INSERT INTO `piutangdetail` VALUES (24, 5, 1335389.00, '2019-05-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (25, 5, 1335389.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (26, 6, 971429.00, '2019-05-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (27, 7, 4000000.00, '2019-04-01', 'admin', '2019-04-01 00:00:00.000000', 'DP', NULL, NULL);
+INSERT INTO `piutangdetail` VALUES (29, 6, 971429.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (30, 7, 971429.00, '2019-05-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (31, 7, 971429.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (32, 7, 971429.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (33, 7, 777143.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (34, 8, 5000000.00, '2019-04-01', 'admin', '2019-04-01 00:00:00.000000', 'DP', NULL, NULL);
+INSERT INTO `piutangdetail` VALUES (35, 8, 1214286.00, '2019-05-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (36, 8, 1214286.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (37, 8, 1214286.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (38, 8, 1214286.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (39, 8, 1214286.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (40, 9, 2000000.00, '2019-04-01', 'admin', '2019-04-01 00:00:00.000000', 'DP', NULL, NULL);
+INSERT INTO `piutangdetail` VALUES (41, 9, 906667.00, '2019-05-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (42, 9, 906667.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (43, 9, 906667.00, '2019-06-01', '', '2019-04-01 00:00:00.000000', 'KAS', 0.00, '2019-04-01');
+INSERT INTO `piutangdetail` VALUES (44, 9, 906667.00, '2019-06-01', '', '2019-04-02 00:00:00.000000', 'KAS', 0.00, '2019-04-02');
+INSERT INTO `piutangdetail` VALUES (45, 1, 1550000.00, '2019-06-01', '', '2019-04-02 00:00:00.000000', 'KAS', 0.00, '2019-04-02');
+INSERT INTO `piutangdetail` VALUES (46, 10, 6000000.00, '2019-04-02', 'admin', '2019-04-02 00:00:00.000000', 'DP', NULL, NULL);
+INSERT INTO `piutangdetail` VALUES (47, 10, 955556.00, '2019-05-02', '', '2019-04-02 00:00:00.000000', 'KAS', 0.00, '2019-04-02');
+INSERT INTO `piutangdetail` VALUES (48, 10, 955556.00, '2019-06-02', '', '2019-04-02 00:00:00.000000', 'KAS', 0.00, '2019-04-02');
+INSERT INTO `piutangdetail` VALUES (49, 10, 955556.00, '2019-06-02', '', '2019-04-02 00:00:00.000000', 'KAS', 0.00, '2019-04-02');
+INSERT INTO `piutangdetail` VALUES (50, 1, 1550000.00, '2019-06-01', '', '2019-04-29 00:00:00.000000', 'KAS', 0.00, '2019-04-29');
+INSERT INTO `piutangdetail` VALUES (51, 10, 955556.00, '2019-06-02', '', '2019-04-29 00:00:00.000000', 'KAS', 0.00, '2019-04-29');
 
 -- ----------------------------
 -- Table structure for roles
@@ -265,12 +360,33 @@ CREATE TABLE `stok`  (
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of stok
 -- ----------------------------
 INSERT INTO `stok` VALUES (1, 'N-MAX', 'BLACK', 'MS-01029102', 'MR-PAO19339', '2017', NULL, 'admin', '2019-02-16 00:00:00.000000');
+INSERT INTO `stok` VALUES (2, 'VIXION', 'MERAH', 'MR0122231', 'MR-PAC018223', '2018', NULL, 'admin', '2019-04-01 00:00:00.000000');
+
+-- ----------------------------
+-- Table structure for tabelstok
+-- ----------------------------
+DROP TABLE IF EXISTS `tabelstok`;
+CREATE TABLE `tabelstok`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `notransaksi` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `tgltransaksi` date NULL DEFAULT NULL,
+  `barangid` int(11) NULL DEFAULT NULL,
+  `qty` int(11) NULL DEFAULT NULL,
+  `hrgbrg` decimal(19, 2) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tabelstok
+-- ----------------------------
+INSERT INTO `tabelstok` VALUES (1, 'NT0005', '2019-04-01', 1, 10, 0.00);
+INSERT INTO `tabelstok` VALUES (2, 'NT0004', '2019-04-01', 2, 15, 0.00);
 
 -- ----------------------------
 -- Table structure for userrole
@@ -292,6 +408,7 @@ INSERT INTO `userrole` VALUES (10, 1);
 INSERT INTO `userrole` VALUES (11, 1);
 INSERT INTO `userrole` VALUES (12, 1);
 INSERT INTO `userrole` VALUES (13, 1);
+INSERT INTO `userrole` VALUES (14, 3);
 
 -- ----------------------------
 -- Table structure for users
@@ -305,7 +422,7 @@ CREATE TABLE `users`  (
   `createdby` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `createdon` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of users
@@ -319,6 +436,7 @@ INSERT INTO `users` VALUES (10, 'admin2', 'admin2', '0192023a7bbd73250516f069df1
 INSERT INTO `users` VALUES (11, 'admin3', 'asd', '21232f297a57a5a743894a0e4a801fc3', 'System', '2019-02-16 00:00:00.000000');
 INSERT INTO `users` VALUES (12, 'admin5', 'asd', '21232f297a57a5a743894a0e4a801fc3', 'System', '2019-02-16 00:00:00.000000');
 INSERT INTO `users` VALUES (13, 'adming', 'sadasd', '21232f297a57a5a743894a0e4a801fc3', 'System', '2019-02-16 00:00:00.000000');
+INSERT INTO `users` VALUES (14, 'stok', 'stok', '47f7fa8ae602858dc064642059932fe1', 'System', '2019-04-01 00:00:00.000000');
 
 -- ----------------------------
 -- Table structure for vendor

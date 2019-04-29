@@ -4,24 +4,26 @@
 
 	$nmbrg = $_POST['nmbrg'];
 	$warna = $_POST['warna'];
-	$nosin	  = $_POST['nosin'];
-	$norang	  = $_POST['norang'];
+	// $nosin	  = $_POST['nosin'];
+	// $norang	  = $_POST['norang'];
+	$cc = $_POST['cc'];
 	$tahun	  = $_POST['tahun'];
 	$user	  = $_POST['user'];
 	$now	  = date("Y-m-d");
 
 	// Validasi No mesin
 
-	$rs = mysqli_query($Open,"Select count(*) ext from stok where nomesin = '$nosin' or norangka = '$norang'");
-	$row = mysqli_fetch_assoc($rs);
-	if($row['ext'] > 0){
-		$data['message'] = 'E500-EXS-01';
-	}
-	else{
+	// $rs = mysqli_query($Open,"Select count(*) ext from stok where nomesin = '$nosin' or norangka = '$norang'");
+	// $row = mysqli_fetch_assoc($rs);
+	// if($row['ext'] > 0){
+	// 	$data['message'] = 'E500-EXS-01';
+	// }
+	// else{
 
-		$input	="INSERT INTO stok (namabarang, warna, nomesin, norangka,tahun,createdby,createdon) 
+		//$input	="INSERT INTO stok (namabarang, warna, nomesin, norangka,tahun,createdby,createdon) 
+		$input	="INSERT INTO stok (namabarang, warna,tahun,createdby,createdon,cc) 
 		VALUES 
-		('$nmbrg','$warna','$nosin','$norang','$tahun','$user','$now')";
+		('$nmbrg','$warna','$tahun','$user','$now','$cc')";
 // print_r($input);
 		$query_input =mysqli_query($Open,$input);
 		// echo $query_input;
@@ -31,6 +33,6 @@
 		else{
 			$data['message'] = 'E500-03'; // gagal input
 		}
-	}
+	// }
 	echo json_encode($data);
 ?>

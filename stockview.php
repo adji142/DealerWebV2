@@ -29,6 +29,8 @@ include 'parts/header.php';
 			            					<?php
 			            						$rs = mysqli_query($Open,"
 									            select *, (select sum(pb.qty) from tabelstok pb where pb.barangid = s.id )Pembelian ,
+									            (select nomesin from tabelstok pb where pb.barangid = s.id and nomesin is not null limit 1) nomesin,
+									            (select  norangka from tabelstok pb where pb.barangid = s.id and norangka is not null limit 1) norangka,
 												(select sum(pb.qty) from penjualandetail pb where pb.stockid = s.id ) penjualan,
 												(select sum(pb.qty) from tabelstok pb where pb.barangid = s.id ) - 
 												(select sum(pb.qty) from penjualandetail pb where pb.stockid = s.id ) qtyakhir
@@ -40,6 +42,7 @@ include 'parts/header.php';
 										            $warna   = stripslashes ($rsx['warna']);
 										            $nomesin   = stripslashes ($rsx['nomesin']);
 										            $norangka   = stripslashes ($rsx['norangka']);
+										            $cc = stripslashes($rsx['cc']);
 										            $qtystok   = stripslashes ($rsx['qtyakhir']);
 										            echo "
 										            <tr>
@@ -48,6 +51,7 @@ include 'parts/header.php';
 										              <td>".$warna."</td>
 										              <td>".$nomesin."</td>
 										              <td>".$norangka."</td>
+										              <td>".$cc."</td>
 										              <td>".$qtystok."</td>
 										            </tr>
 										            ";

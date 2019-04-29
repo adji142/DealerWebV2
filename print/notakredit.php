@@ -121,9 +121,10 @@
           <tbody>
           <?php
             $rs = mysqli_query($Open,"
-                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,st.nomesin,st.norangka from penjualan a
+                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,ts.nomesin,ts.norangka from penjualan a
                   left join penjualandetail b on a.id = b.penjualanid
                   left join stok st on st.id= b.stockid
+                  LEFT JOIN tabelstok ts on st.id = ts.barangid
                   where a.id = $id
                   ");
             while ($rsx = mysqli_fetch_array($rs)) {
@@ -286,9 +287,10 @@
           <tbody>
           <?php
             $rs = mysqli_query($Open,"
-                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,st.nomesin,st.norangka from penjualan a
+                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,ts.nomesin,ts.norangka from penjualan a
                   left join penjualandetail b on a.id = b.penjualanid
                   left join stok st on st.id= b.stockid
+                  LEFT JOIN tabelstok ts on st.id = ts.barangid
                   where a.id = $id
                   ");
             while ($rsx = mysqli_fetch_array($rs)) {
@@ -450,9 +452,10 @@
           <tbody>
           <?php
             $rs = mysqli_query($Open,"
-                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,st.nomesin,st.norangka from penjualan a
+                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,ts.nomesin,ts.norangka from penjualan a
                   left join penjualandetail b on a.id = b.penjualanid
                   left join stok st on st.id= b.stockid
+                  LEFT JOIN tabelstok ts on st.id = ts.barangid
                   where a.id = $id
                   ");
             while ($rsx = mysqli_fetch_array($rs)) {
@@ -596,9 +599,10 @@
     <!-- /.row -->
           <?php
             $rs = mysqli_query($Open,"
-                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,st.nomesin,st.norangka from penjualan a
+                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,ts.nomesin,ts.norangka from penjualan a
                   left join penjualandetail b on a.id = b.penjualanid
                   left join stok st on st.id= b.stockid
+                  LEFT JOIN tabelstok ts on st.id = ts.barangid
                   where a.id = $id
                   ");
             while ($rsx = mysqli_fetch_array($rs)) {
@@ -729,9 +733,10 @@
     <!-- /.row -->
           <?php
             $rs = mysqli_query($Open,"
-                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,st.nomesin,st.norangka from penjualan a
+                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,ts.nomesin,ts.norangka from penjualan a
                   left join penjualandetail b on a.id = b.penjualanid
                   left join stok st on st.id= b.stockid
+                  LEFT JOIN tabelstok ts on st.id = ts.barangid
                   where a.id = $id
                   ");
             while ($rsx = mysqli_fetch_array($rs)) {

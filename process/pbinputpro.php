@@ -12,6 +12,8 @@
 	// $vendor	  = $_POST['vendor'];
 	if(isset($_POST['stock']))$stock	  = $_POST['stock'];
 	if(isset($_POST['qty']))$qty	  = $_POST['qty'];
+	if(isset($_POST['nosin']))$nosin	  = $_POST['nosin'];
+	if(isset($_POST['norang']))$norang	  = $_POST['norang'];
 	// $Harga	  = $_POST['hrg'];
 	$now	  = date("Y-m-d");
 
@@ -62,9 +64,9 @@
 		}
 	}
 	else{
-		$inputdetail	="INSERT INTO tabelstok (notransaksi,tgltransaksi,barangid,qty,hrgbrg) 
+		$inputdetail	="INSERT INTO tabelstok (notransaksi,tgltransaksi,barangid,qty,hrgbrg,nomesin,norangka) 
 		VALUES 
-		('$nonota','$tglnota',$stock,$qty,0)";
+		('$nonota','$tglnota',$stock,$qty,0,'$nosin','$norang')";
 		$query_inputD =mysqli_query($Open,$inputdetail);
 		if($query_inputD){
 			$data['success'] = true;

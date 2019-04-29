@@ -76,6 +76,18 @@ if ($detail > 0){
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										<div class="control-group">
+											<label class="control-label" for="nama">Nomer Mesin</label>
+											<div class="controls">
+												<input type="text" class="span6 disabled" id="nosin" placeholder="Nomer Mesin" required="" name="nosin">
+											</div>				
+										</div> 
+										<div class="control-group">
+											<label class="control-label" for="nama">Nomer Rangka</label>
+											<div class="controls">
+												<input type="text" class="span6 disabled" id="norang" placeholder="Nomer Rangka" required="" name="norang">
+											</div> 
+										</div> 
+										<div class="control-group">
 											<label class="control-label" for="nama">Jumlah</label>
 											<div class="controls">
 												<input type="number" class="span6 disabled" id="qty" placeholder="Jumlah" required="" name="qty">

@@ -224,6 +224,7 @@ include 'parts/footer.php';
         					type: 'success',
         					confirmButtonText: 'Cool'
         				}).then(function() {
+        					window.open('print/cetakkwitansi.php?id='+id, '_blank');
         					document.location='ptgview.php';
         				});
         			}
@@ -340,7 +341,7 @@ include 'parts/footer.php';
 					var angsuranpokok = 0;
 					9
 					angsuranpokok = Math.round(angsuran) + Math.round(bunga);
-					// alert(jt)
+					//alert(jt)
 					// alert(now)
 					if(jt < now && jt != 'Wed Jan 01 1000 07:07:12 GMT+0707 (Western Indonesia Time)'){
 						denda = angsuranpokok * 0.5/100;

@@ -23,12 +23,14 @@ include 'parts/header.php';
 								        <th>Nama Unit</th>
 								        <th>Warna</th>
 								        <th>Qty</th>
+								        <th>No Mesin</th>
+								        <th>No Rangka</th>
 			            			</thead>
 			            			<tbody>
 			            				
 			            					<?php
 			            						$rs = mysqli_query($Open,"
-									            select a.id,a.notransaksi,a.tgltransaksi,s.namabarang,s.warna,a.qty
+									            select a.id,a.notransaksi,a.tgltransaksi,s.namabarang,s.warna,a.qty,a.nomesin,a.norangka
 												from tabelstok a
 												inner join stok s on a.barangid = s.id
 												order by a.tgltransaksi desc
@@ -40,6 +42,8 @@ include 'parts/header.php';
 										            $namabarang = stripslashes ($rsx['namabarang']);
 										            $warna = stripslashes ($rsx['warna']);
 										            $qtybeli = stripslashes ($rsx['qty']);
+										            $nomesin = stripslashes ($rsx['nomesin']);
+										            $norangka = stripslashes ($rsx['norangka']);
 										            echo "
 										            <tr>
 										              <td>
@@ -50,6 +54,8 @@ include 'parts/header.php';
 										              <td>".$namabarang."</td>
 										              <td>".$warna."</td>
 										              <td>".$qtybeli."</td>
+										              <td>".$nomesin."</td>
+										              <td>".$norangka."</td>
 										            </tr>
 										            ";
 										          }

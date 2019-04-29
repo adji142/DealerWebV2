@@ -27,18 +27,24 @@ include 'parts/header.php';
 												<input type="text" class="span6 disabled" id="warna" placeholder="Warna" required="" name="warna">
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
-										<div class="control-group">
+										<!-- <div class="control-group">
 											<label class="control-label" for="nama">Nomer Mesin</label>
 											<div class="controls">
 												<input type="text" class="span6 disabled" id="nosin" placeholder="Nomer Mesin" required="" name="nosin">
-											</div> <!-- /controls -->				
-										</div> <!-- /control-group -->
+											</div>				
+										</div> 
 										<div class="control-group">
 											<label class="control-label" for="nama">Nomer Rangka</label>
 											<div class="controls">
 												<input type="text" class="span6 disabled" id="norang" placeholder="Nomer Rangka" required="" name="norang">
-											</div> <!-- /controls -->				
-										</div> <!-- /control-group -->
+											</div> 
+										</div>  -->
+										<div class="control-group">
+											<label class="control-label" for="nama">CC</label>
+											<div class="controls">
+												<input type="text" class="span6 disabled" id="cc" placeholder="CC Motor" required="" name="cc">
+											</div> 
+										</div>
 										<div class="control-group">
 											<label class="control-label" for="nama">Tahun</label>
 											<div class="controls">
