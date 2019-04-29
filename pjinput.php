@@ -103,14 +103,14 @@ if ($detail > 0){
 										<div class="control-group">
 											<label class="control-label" for="nama">Harga Jual OTR</label>
 											<div class="controls">
-												<input type="number" class="span6 disabled" id="hrg" placeholder="Harga" required="" name="hrg">
+												<input type="text" class="span6 disabled" id="hrg" placeholder="Harga" required="" name="hrg">
 												<input type="hidden" class="span6 disabled" id="user"  required="" name="user" value="<?php echo $username;?>">
 											</div>
 										</div>
 										<div class="control-group">
 											<label class="control-label" for="nama">Uang Muka</label>
 											<div class="controls">
-												<input type="number" class="span6 disabled" id="dp" placeholder="Uang Muka" name="dp">
+												<input type="text" class="span6 disabled" id="dp" placeholder="Uang Muka" name="dp">
 											</div>
 										</div>
 										<div class="control-group">
@@ -167,8 +167,8 @@ include 'parts/footer.php';
 			// })
 		});
 		$('#tempo').focusout(function() {
-			var otr = $('#hrg').val();
-			var dp = $('#dp').val();
+			var otr =  $('#hrg').val().replace(',','').replace(',','');
+			var dp = $('#dp').val().replace(',','').replace(',','');
 			var tempo = $('#tempo').val();
 			var sisahutang = 0;
 			var angsuran = 0 ;
@@ -188,6 +188,32 @@ include 'parts/footer.php';
 					confirmButtonText: 'Cool'
 				});
 			}
+		});
+		$('#hrg').keyup(function(event) {
+
+		  // skip for arrow keys
+		  if(event.which >= 37 && event.which <= 40) return;
+
+		  // format number
+		  $(this).val(function(index, value) {
+		    return value
+		    .replace(/\D/g, "")
+		    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+		    ;
+		  });
+		});
+		$('#dp').keyup(function(event) {
+
+		  // skip for arrow keys
+		  if(event.which >= 37 && event.which <= 40) return;
+
+		  // format number
+		  $(this).val(function(index, value) {
+		    return value
+		    .replace(/\D/g, "")
+		    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+		    ;
+		  });
 		});
 		$('#edit-profile').submit(function (e){
 			$('#btn_submit').text('Tunggu Sebentar...');

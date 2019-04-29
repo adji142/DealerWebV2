@@ -349,16 +349,19 @@ include 'parts/footer.php';
 					$('#idpiut').val(v.id);
 					$('#nonota').val(v.nonota);
 					$('#angsuranke').val(v.angsuranke);
-					$('#rpangsuran').val(TotalAngsuran);
-					$('#Bayar').val(TotalAngsuran);
-					$('#denda').val(denda);
-					$('#angsuranpokok').val(angsuranpokok);
+					$('#rpangsuran').val(formatNumber(TotalAngsuran));
+					$('#Bayar').val(formatNumber(TotalAngsuran));
+					$('#denda').val(formatNumber(denda));
+					$('#angsuranpokok').val(formatNumber(angsuranpokok));
 					$('#tempo').val(v.tempo);
-					$('#otr').val(v.otr);
+					$('#otr').val(formatNumber(v.otr));
 					$('#ModalBayar').modal('show');
 				});
 			}
 		}
   	});
   }
+	function formatNumber(num) {
+	  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+	}
 </script>

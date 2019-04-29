@@ -1,0 +1,5 @@
+* nomer transaksi stok suruh otomatis, norangka, nomer mesin di pindah ke stok
+* rupiah sparator di tiap field number (Clear)
+* tambah CC di barang
+* cetakan kwitansi pembayaran uang muka salah from to (Clear)
+* angsuran tambah cetakan
