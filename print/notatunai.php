@@ -69,7 +69,7 @@
     <!-- info row -->
     <div class="row invoice-info">
       <div class="col-sm-4 invoice-col">
-        From
+        to
         <address>
           <strong>Dealer Putra Utama Motor</strong><br>
           Jalan Slamet Riyadi Gayam, Johosari, Joho, <br>
@@ -79,7 +79,7 @@
       </div>
       <!-- /.col -->
       <div class="col-sm-4 invoice-col">
-        To
+        From
         <address>
         <?php
           echo "<strong>".$namacust."</strong><br>
@@ -234,7 +234,7 @@
     <!-- info row -->
     <div class="row invoice-info">
       <div class="col-sm-4 invoice-col">
-        From
+        To
         <address>
           <strong>Dealer Putra Utama Motor</strong><br>
           Jalan Slamet Riyadi Gayam, Johosari, Joho, <br>
@@ -244,7 +244,7 @@
       </div>
       <!-- /.col -->
       <div class="col-sm-4 invoice-col">
-        To
+        From
         <address>
         <?php
           echo "<strong>".$namacust."</strong><br>
@@ -398,7 +398,7 @@
     <!-- info row -->
     <div class="row invoice-info">
       <div class="col-sm-4 invoice-col">
-        From
+        To
         <address>
           <strong>Dealer Putra Utama Motor</strong><br>
           Jalan Slamet Riyadi Gayam, Johosari, Joho, <br>
@@ -408,7 +408,7 @@
       </div>
       <!-- /.col -->
       <div class="col-sm-4 invoice-col">
-        To
+        From
         <address>
         <?php
           echo "<strong>".$namacust."</strong><br>
