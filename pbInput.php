@@ -10,10 +10,14 @@ $nonota = '';
 $tglnota = '';
 $tglterima='';
 $vendorid = null;
-
+$nonota = 'STK000';
 
 if (isset($_GET['id'])) $id = $_GET['id'];
 if (isset($_GET['detail'])) $detail = $_GET['detail'];
+
+$rs = mysqli_query($Open,"select COALESCE(MAX(id),0) + 1 nomer from tabelstok");
+$row = mysqli_fetch_assoc($rs);
+$nonota = $nonota.''.$row['nomer'];
 
 if ($detail > 0){
 	$desable = 'readonly';
@@ -45,7 +49,7 @@ if ($detail > 0){
 			            				<div class="control-group">
 											<label class="control-label" for="username">Nomer Transaksi</label>
 											<div class="controls">
-												<input type="text" class="span6 disabled" id="nonota" placeholder="Nomer Transaksi" required="" name="nonota" <?php echo $desable ; ?> value = "<?php echo $nonota;?>">
+												<input type="text" class="span6 disabled" id="nonota" placeholder="Nomer Transaksi" required="" name="nonota" value = "<?php echo $nonota;?>" readonly>
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										<div class="control-group">

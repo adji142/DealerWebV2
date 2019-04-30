@@ -72,7 +72,7 @@
     <!-- info row -->
     <div class="row invoice-info">
       <div class="col-sm-4 invoice-col">
-        From
+        To
         <address>
           <strong>Dealer Putra Utama Motor</strong><br>
           Jalan Slamet Riyadi Gayam, Johosari, Joho, <br>
@@ -82,7 +82,7 @@
       </div>
       <!-- /.col -->
       <div class="col-sm-4 invoice-col">
-        To
+        From
         <address>
         <?php
           echo "<strong>".$namacust."</strong><br>
@@ -108,7 +108,7 @@
                   select a.debet,b.src,b.tgltrx,b.tgljatuhtempo,b.kredit,b.denda,COUNT(case when b.src != 'DP' then 1 else null end) angsuranke
                   From piutang a
                   LEFT JOIN piutangdetail b on a.id = b.piutangid
-                  where a.id = 10
+                  where a.id = $id
                   and tgltrx is not null 
                   ORDER BY tgltrx desc
                   limit 1

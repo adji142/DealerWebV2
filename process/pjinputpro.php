@@ -23,11 +23,11 @@
 	if(isset($_POST['tglnota'])) $tglnota = $_POST['tglnota'];
 	if(isset($_POST['cust'])) $cust	  = $_POST['cust'];
 	if(isset($_POST['stock'])) $stock	  = $_POST['stock'];
-	if(isset($_POST['hrg'])) $hrg	  = $_POST['hrg'];
-	if(isset($_POST['dp'])) $dp	  = $_POST['dp'];
+	if(isset($_POST['hrg'])) $hrg	  = str_replace(',','',$_POST['hrg']);
+	if(isset($_POST['dp'])) $dp	  = str_replace(',', '', $_POST['dp']);
 	if(isset($_POST['trxtype'])) $trxtype	  = $_POST['trxtype'];
 	if(isset($_POST['tempo'])) $tempo	  = $_POST['tempo'];
-	if(isset($_POST['angsuran'])) $angsuran	  = $_POST['angsuran'];
+	if(isset($_POST['angsuran'])) $angsuran	  = str_replace(',', '', $_POST['angsuran']);
 	if(isset($_POST['alamat'])) $alamat	  = $_POST['alamat'];
 	if(isset($_POST['user'])) $user	  = $_POST['user'];
 	$now	  = date("Y-m-d");

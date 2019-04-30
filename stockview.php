@@ -20,8 +20,9 @@ include 'parts/header.php';
 			            				<!-- <th>#</th> -->
 								        <th>Nama Stock</th>
 								        <th>Warna</th>
-								        <th>Nomer Mesin</th>
-								        <th>Nomer Rangka</th>
+								        <!-- <th>Nomer Mesin</th>
+								        <th>Nomer Rangka</th> -->
+								        <th>CC</th>
 								        <th>Stock Gudang</th>
 			            			</thead>
 			            			<tbody>
@@ -49,8 +50,6 @@ include 'parts/header.php';
 										              
 										              <td>".$namabarang."</td>
 										              <td>".$warna."</td>
-										              <td>".$nomesin."</td>
-										              <td>".$norangka."</td>
 										              <td>".$cc."</td>
 										              <td>".$qtystok."</td>
 										            </tr>

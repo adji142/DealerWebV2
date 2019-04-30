@@ -8,7 +8,7 @@ include 'parts/header.php';
 				<div class="span12">
 					<div class="widget widget-nopad">
 						<div class="widget-header"> <i class="icon-list-alt"></i>
-			            	<h3>Tambah Transaksi Stock Baru <a href="pbinput.php" class="btn btn-general" id="btn_submit">Tambah</a></h3>
+			            	<h3>Tambah Transaksi Stock Baru <a href="pbInput.php" class="btn btn-general" id="btn_submit">Tambah</a></h3>
 			            </div>
 			            <br>
 			            <!-- <div class="tab-content"> -->
