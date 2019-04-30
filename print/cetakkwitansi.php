@@ -108,7 +108,7 @@
                   select a.debet,b.src,b.tgltrx,b.tgljatuhtempo,b.kredit,b.denda,COUNT(case when b.src != 'DP' then 1 else null end) angsuranke
                   From piutang a
                   LEFT JOIN piutangdetail b on a.id = b.piutangid
-                  where a.id = 10
+                  where a.id = $id
                   and tgltrx is not null 
                   ORDER BY tgltrx desc
                   limit 1
