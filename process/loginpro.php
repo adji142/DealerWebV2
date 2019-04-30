@@ -8,7 +8,7 @@
 	$pass = md5($_POST['password']);
 
 	$query = "SELECT * FROM users WHERE username = '$username'";
-	$hasil = mysqli_query($Open,$query) or die("Error");
+	$hasil = mysqli_query($Open,$query) or die(mysqli_error($Open));
 	$data_fetch  = mysqli_fetch_array($hasil);
 
 	if ($data_fetch['username'] && $pass ==$data_fetch['password']){

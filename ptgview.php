@@ -246,9 +246,9 @@ include 'parts/footer.php';
     $('#btn_lunas').click(function (){
 		var id = $('#idpiut').val();
     	var otr = $('#otr').val();
-    	var angsuran = $('#angsuranpokok').val();
+    	var angsuran = $('#angsuranpokok').val().replace(',','').replace(',','');
     	var tempo = $('#tempo').val();
-    	var sisaangsuran =(angsuran * (tempo-$('#angsuranke').val()-1));
+    	var sisaangsuran =(angsuran * (tempo - $('#angsuranke').val()-1));
     	var totalpotongan = sisaangsuran*7/100;
     	var totalbayar = 0;
     	var pelunasan = "ya";
@@ -262,22 +262,22 @@ include 'parts/footer.php';
 		  			"<tr>"+
 		  				"<td>OTR</td>"+
 		  				"<td>:</td>"+
-		  				"<td>"+otr+"</td>"+
+		  				"<td>"+formatNumber(otr)+"</td>"+
 		  			"</tr>"+
 		  			"<tr>"+
 		  				"<td>Total Sisa Angsuran Pokok plus bunga</td>"+
 		  				"<td>:</td>"+
-		  				"<td>"+sisaangsuran+"</td>"+
+		  				"<td>"+formatNumber(sisaangsuran)+"</td>"+
 		  			"</tr>"+
 		  			"<tr>"+
 		  				"<td>Total Diskon potongan</td>"+
 		  				"<td>:</td>"+
-		  				"<td>"+sisaangsuran * 7/100+"</td>"+
+		  				"<td>"+formatNumber(sisaangsuran * 7/100)+"</td>"+
 		  			"</tr>"+
 		  			"<tr>"+
 		  				"<td>Total Bayar</td>"+
 		  				"<td>:</td>"+
-		  				"<td>"+totalbayar+"</td>"+
+		  				"<td>"+formatNumber(totalbayar)+"</td>"+
 		  			"</tr>"+
 		  			"</table>",
 		  showCancelButton: true,

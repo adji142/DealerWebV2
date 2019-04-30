@@ -66,14 +66,14 @@ include 'parts/header.php';
 
 			            						$rs = mysqli_query($Open,"
 
-									            select a.nonota,convert(a.tglnota,date)tglnota,a.tempo,a.jenistrx,s.namabarang,s.warna,s.nomesin,s.norangka,sum(b.qty) qty,sum(b.hrgotr) hrg from penjualan a
+									            select a.nonota,convert(a.tglnota,date)tglnota,a.tempo,a.jenistrx,s.namabarang,s.warna,ts.nomesin,ts.norangka,sum(b.qty) qty,sum(b.hrgotr) hrg from penjualan a
 
-												inner join penjualandetail b on a.id = b.penjualanid
+inner join penjualandetail b on a.id = b.penjualanid
 
-												left join stok s on s.id = b.stockid
-
-												group by a.nonota,a.tglnota,a.tempo,a.jenistrx,s.namabarang,s.warna,s.nomesin,s.norangka
-												order by a.tglnota desc
+left join stok s on s.id = b.stockid
+left join tabelstok ts on s.id = ts.barangid
+group by a.nonota,a.tglnota,a.tempo,a.jenistrx,s.namabarang,s.warna,ts.nomesin,ts.norangka
+order by a.tglnota desc
 
 									            ");
 
