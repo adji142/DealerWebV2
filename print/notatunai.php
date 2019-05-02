@@ -119,9 +119,10 @@
           <tbody>
           <?php
             $rs = mysqli_query($Open,"
-                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,st.nomesin,st.norangka from penjualan a
+                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,ts.nomesin,ts.norangka from penjualan a
                   left join penjualandetail b on a.id = b.penjualanid
                   left join stok st on st.id= b.stockid
+                  LEFT JOIN tabelstok ts on st.id = ts.barangid
                   where a.id = $id
                   ");
             while ($rsx = mysqli_fetch_array($rs)) {
@@ -141,7 +142,7 @@
                   <td>".$tahun."</td>
                   <td>".$nomesin."</td>
                   <td>".$norangka."</td>
-                  <td>".$hrgotr."</td>
+                  <td>".number_format($hrgotr)."</td>
                 </tr>
               ";
             }
@@ -171,7 +172,7 @@
           <table class="table">
             <tr>
               <th style="width:50%">Subtotal:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
             <tr>
               <th>Tax (10%)</th>
@@ -183,7 +184,7 @@
             </tr>
             <tr>
               <th>Total:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
           </table>
         </div>
@@ -284,9 +285,10 @@
           <tbody>
           <?php
             $rs = mysqli_query($Open,"
-                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,st.nomesin,st.norangka from penjualan a
+                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,ts.nomesin,ts.norangka from penjualan a
                   left join penjualandetail b on a.id = b.penjualanid
                   left join stok st on st.id= b.stockid
+                  LEFT JOIN tabelstok ts on st.id = ts.barangid
                   where a.id = $id
                   ");
             while ($rsx = mysqli_fetch_array($rs)) {
@@ -306,7 +308,7 @@
                   <td>".$tahun."</td>
                   <td>".$nomesin."</td>
                   <td>".$norangka."</td>
-                  <td>".$hrgotr."</td>
+                  <td>".number_format($hrgotr)."</td>
                 </tr>
               ";
             }
@@ -336,7 +338,7 @@
           <table class="table">
             <tr>
               <th style="width:50%">Subtotal:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
             <tr>
               <th>Tax (10%)</th>
@@ -348,7 +350,7 @@
             </tr>
             <tr>
               <th>Total:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
           </table>
         </div>
@@ -448,9 +450,10 @@
           <tbody>
           <?php
             $rs = mysqli_query($Open,"
-                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,st.nomesin,st.norangka from penjualan a
+                  select b.id,b.qty,b.hrgotr,st.namabarang,st.warna,st.tahun,ts.nomesin,ts.norangka from penjualan a
                   left join penjualandetail b on a.id = b.penjualanid
                   left join stok st on st.id= b.stockid
+                  LEFT JOIN tabelstok ts on st.id = ts.barangid
                   where a.id = $id
                   ");
             while ($rsx = mysqli_fetch_array($rs)) {
@@ -470,7 +473,7 @@
                   <td>".$tahun."</td>
                   <td>".$nomesin."</td>
                   <td>".$norangka."</td>
-                  <td>".$hrgotr."</td>
+                  <td>".number_format($hrgotr)."</td>
                 </tr>
               ";
             }
@@ -500,7 +503,7 @@
           <table class="table">
             <tr>
               <th style="width:50%">Subtotal:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
             <tr>
               <th>Tax (10%)</th>
@@ -512,7 +515,7 @@
             </tr>
             <tr>
               <th>Total:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
           </table>
         </div>

@@ -144,7 +144,7 @@
                   <td>".$tahun."</td>
                   <td>".$nomesin."</td>
                   <td>".$norangka."</td>
-                  <td>".$hrgotr."</td>
+                  <td>".number_format($hrgotr)."</td>
                 </tr>
               ";
             }
@@ -174,7 +174,7 @@
           <table class="table">
             <tr>
               <th style="width:50%">Subtotal:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
             <tr>
               <th>Tax (10%)</th>
@@ -186,7 +186,7 @@
             </tr>
             <tr>
               <th>Total:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
           </table>
         </div>
@@ -310,7 +310,7 @@
                   <td>".$tahun."</td>
                   <td>".$nomesin."</td>
                   <td>".$norangka."</td>
-                  <td>".$hrgotr."</td>
+                  <td>".number_format($hrgotr)."</td>
                 </tr>
               ";
             }
@@ -340,7 +340,7 @@
           <table class="table">
             <tr>
               <th style="width:50%">Subtotal:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
             <tr>
               <th>Tax (10%)</th>
@@ -352,7 +352,7 @@
             </tr>
             <tr>
               <th>Total:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
           </table>
         </div>
@@ -475,7 +475,7 @@
                   <td>".$tahun."</td>
                   <td>".$nomesin."</td>
                   <td>".$norangka."</td>
-                  <td>".$hrgotr."</td>
+                  <td>".number_format($hrgotr)."</td>
                 </tr>
               ";
             }
@@ -505,7 +505,7 @@
           <table class="table">
             <tr>
               <th style="width:50%">Subtotal:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
             <tr>
               <th>Tax (10%)</th>
@@ -517,7 +517,7 @@
             </tr>
             <tr>
               <th>Total:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
           </table>
         </div>
@@ -634,7 +634,7 @@
           <table class="table">
             <tr>
               <th style="width:50%">Subtotal:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
             <tr>
               <th style="width:50%">Pembayaran (DP):</th>
@@ -768,7 +768,7 @@
           <table class="table">
             <tr>
               <th style="width:50%">Subtotal:</th>
-              <td><?php echo $hrgotr; ?></td>
+              <td><?php echo number_format($hrgotr); ?></td>
             </tr>
             <tr>
               <th style="width:50%">Pembayaran (DP):</th>
